@@ -124,11 +124,14 @@
 @media (max-width: 768px) {
     .navbar-toggle {
         display: flex;
+        z-index: 100;
+        /* Ensure button is clickable */
     }
 
     .navbar-menu {
         position: fixed;
-        top: 60px;
+        top: 72px;
+        /* Match navbar height */
         left: 0;
         right: 0;
         flex-direction: column;
@@ -136,10 +139,15 @@
         box-shadow: var(--shadow-lg);
         padding: var(--space-6);
         gap: var(--space-4);
-        transform: translateY(-100%);
+        transform: translateY(-150%);
+        /* Move completely out of view */
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-base);
+        z-index: 90;
+        /* Below toggle but above content */
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
     }
 
     .navbar-menu.active {
@@ -150,6 +158,12 @@
 
     .navbar-menu a::after {
         display: none;
+    }
+
+    /* Adjust button for mobile */
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -597,9 +611,17 @@
 }
 
 @keyframes doctorFloat {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .doctor-profile-card {
@@ -1351,6 +1373,7 @@
     background-color: var(--color-accent-light);
     color: var(--color-white);
 }
+
 /* ============================================
    DOCTOR CAROUSEL NAVIGATION BUTTONS
    ============================================ */
@@ -1402,13 +1425,16 @@
     gap: var(--space-6);
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
     padding: var(--space-4) 0;
 }
 
 .doctor-carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 /* ============================================
@@ -1417,6 +1443,7 @@
 
 /* Services Page Responsive Fixes */
 @media (max-width: 768px) {
+
     /* Hero sections */
     .hero {
         min-height: 60vh !important;
@@ -1530,6 +1557,7 @@
 
 /* Tablet responsive (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+
     .grid-cols-3,
     .grid-cols-4 {
         grid-template-columns: repeat(2, 1fr) !important;
