@@ -1,0 +1,160 @@
+/* ============================================
+   SERVICES PAGE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Mobile responsive styles for services page */
+@media (max-width: 768px) {
+
+    /* Hero section */
+    .hero {
+        min-height: 40vh !important;
+        padding: 60px 20px 40px !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    /* Service navigation buttons */
+    .flex.justify-center {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .flex.justify-center .btn {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Grid layouts - stack on mobile */
+    .grid.grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .grid.grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Service cards */
+    .card {
+        margin-bottom: 20px !important;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.75rem !important;
+        text-align: center !important;
+    }
+
+    .section-title.text-left {
+        text-align: center !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    .section-description {
+        font-size: 0.95rem !important;
+    }
+
+    /* Lists */
+    ul {
+        padding-left: 0 !important;
+    }
+
+    .flex.items-center.gap-3 {
+        gap: 10px !important;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 20px !important;
+    }
+
+    .btn-lg {
+        padding: 14px 24px !important;
+    }
+
+    .btn-sm {
+        padding: 10px 16px !important;
+    }
+
+    /* Service icons */
+    .card-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .footer-section {
+        text-align: center !important;
+    }
+
+    .footer-social {
+        justify-content: center !important;
+    }
+
+    .footer-contact-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* CTA Section */
+    .bg-gradient-primary .flex {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .bg-gradient-primary .btn {
+        width: 100% !important;
+    }
+
+    /* Spacing adjustments */
+    .section {
+        padding: 40px 0 !important;
+    }
+
+    .section-sm {
+        padding: 20px 0 !important;
+    }
+
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Hide decorative icons on very small screens */
+    @media (max-width: 480px) {
+        .card>div>i[style*="font-size: 120px"] {
+            font-size: 80px !important;
+        }
+    }
+}
+
+/* Tablet responsive (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid.grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .container {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
