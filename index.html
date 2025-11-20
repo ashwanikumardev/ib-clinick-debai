@@ -14,6 +14,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preload" as="video" href="assets/videos/99688-655952695_small.mp4" type="video/mp4">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -55,7 +56,7 @@
     <section class="hero-modern" id="home">
         <div class="hero-video-container">
             <!-- Video Background (download from https://pixabay.com/videos/dental-surgery-health-99688/) -->
-            <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-background.png">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-background.png">
                 <source src="assets/videos/99688-655952695_small.mp4" type="video/mp4">
             </video>
             <div class="hero-video-overlay"></div>
@@ -311,98 +312,100 @@
                     and aesthetic medicine under one roof.</p>
             </div>
 
-            <div class="doctor-list-modern">
-                <article class="doctor-list-card primary">
-                    <div class="doctor-list-media">
+            <div class="doctor-lineup">
+                <article class="doctor-profile-card">
+                    <div class="doctor-profile-photo">
                         <img src="assets/images/doctor-male.png" alt="Dr. Ahmed Al-Mansouri" loading="lazy">
+                        <span class="doctor-ribbon badge badge-primary">Orthodontics Lead</span>
                     </div>
-                    <div class="doctor-list-body">
-                        <div class="doctor-list-meta">
-                            <span class="badge badge-primary">Orthodontics Lead</span>
-                            <span class="doctor-experience">15+ yrs</span>
+                    <div class="doctor-profile-body">
+                        <div class="doctor-profile-meta">
+                            <span><i class="fas fa-user-md"></i>Chief Dental Surgeon</span>
+                            <span><i class="fas fa-clock"></i>15+ yrs exp</span>
                         </div>
                         <h3>Dr. Ahmed Al-Mansouri</h3>
-                        <p>Aligner pioneer blending digital smile previews with minimally invasive orthodontics.</p>
-                        <ul class="doctor-list-tags">
-                            <li>Clear Aligners</li>
-                            <li>Smile Design</li>
-                            <li>Implant Rehab</li>
+                        <p>Invisible aligner pioneer blending digital smile design with minimally invasive orthodontics.</p>
+                        <ul class="doctor-metrics">
+                            <li><strong>2500+</strong><span>Smile Cases</span></li>
+                            <li><strong>3D</strong><span>Mock-up Planning</span></li>
+                            <li><strong>DDS</strong><span>University of London</span></li>
                         </ul>
-                        <div class="doctor-list-actions">
-                            <a href="doctor-ahmed-al-mansouri.html" class="btn btn-white btn-sm">Profile</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                        <div class="doctor-profile-actions">
+                            <a href="doctor-ahmed-al-mansouri.html" class="btn btn-white btn-sm">View Profile</a>
+                            <a href="contact.html" class="btn btn-outline btn-sm">Book Ahmed</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="doctor-list-card secondary">
-                    <div class="doctor-list-media">
-                        <img src="assets/images/doctor-female.png" alt="Dr. Sarah Johnson" loading="lazy">
-                    </div>
-                    <div class="doctor-list-body">
-                        <div class="doctor-list-meta">
-                            <span class="badge badge-secondary">Cosmetic Dentistry</span>
-                            <span class="doctor-experience">12+ yrs</span>
+                <div class="doctor-grid">
+                    <article class="doctor-profile-mini">
+                        <div class="doctor-mini-header">
+                            <img src="assets/images/doctor-female.png" alt="Dr. Sarah Johnson" loading="lazy">
+                            <span class="badge badge-secondary">Cosmetic</span>
                         </div>
-                        <h3>Dr. Sarah Johnson</h3>
-                        <p>Designs luminous veneers and biomimetic restorations tailored to each face shape.</p>
-                        <ul class="doctor-list-tags">
-                            <li>Veneers</li>
-                            <li>Whitening</li>
-                            <li>Smile Trials</li>
-                        </ul>
-                        <div class="doctor-list-actions">
-                            <a href="doctor-sarah-johnson.html" class="btn btn-white btn-sm">Profile</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                        <h4>Dr. Sarah Johnson</h4>
+                        <p>Smile design artist delivering bespoke veneer journeys and guided whitening.</p>
+                        <div class="doctor-mini-meta">
+                            <span><i class="fas fa-star"></i>4.9/5 rating</span>
+                            <span><i class="fas fa-clock"></i>12+ yrs</span>
                         </div>
-                    </div>
-                </article>
+                        <div class="doctor-mini-actions">
+                            <a href="doctor-sarah-johnson.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
+                            <a href="contact.html" class="btn btn-secondary btn-sm">Book</a>
+                        </div>
+                    </article>
 
-                <article class="doctor-list-card accent">
-                    <div class="doctor-list-media">
-                        <img src="assets/images/doctor-female.png" alt="Dr. Fatima Hassan" loading="lazy">
-                    </div>
-                    <div class="doctor-list-body">
-                        <div class="doctor-list-meta">
+                    <article class="doctor-profile-mini">
+                        <div class="doctor-mini-header">
+                            <img src="assets/images/doctor-female.png" alt="Dr. Fatima Hassan" loading="lazy">
                             <span class="badge badge-accent">Dermatology</span>
-                            <span class="doctor-experience">10+ yrs</span>
                         </div>
-                        <h3>Dr. Fatima Hassan</h3>
-                        <p>Combines regenerative lasers with medical skincare for glass-skin radiance.</p>
-                        <ul class="doctor-list-tags">
-                            <li>Laser Suite</li>
-                            <li>Melasma Care</li>
-                            <li>Skin Boosters</li>
-                        </ul>
-                        <div class="doctor-list-actions">
-                            <a href="doctor-fatima-hassan.html" class="btn btn-white btn-sm">Profile</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                        <h4>Dr. Fatima Hassan</h4>
+                        <p>Laser medicine lead focusing on pigment balance, collagen, and skin resilience.</p>
+                        <div class="doctor-mini-meta">
+                            <span><i class="fas fa-laser"></i>Laser Suite</span>
+                            <span><i class="fas fa-clock"></i>10+ yrs</span>
                         </div>
-                    </div>
-                </article>
+                        <div class="doctor-mini-actions">
+                            <a href="doctor-fatima-hassan.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
+                            <a href="contact.html" class="btn btn-accent btn-sm">Book</a>
+                        </div>
+                    </article>
 
-                <article class="doctor-list-card neutral">
-                    <div class="doctor-list-media">
-                        <img src="assets/images/doctor-male.png" alt="Dr. Michael Chen" loading="lazy">
-                    </div>
-                    <div class="doctor-list-body">
-                        <div class="doctor-list-meta">
-                            <span class="badge">Implantology</span>
-                            <span class="doctor-experience">18+ yrs</span>
+                    <article class="doctor-profile-mini">
+                        <div class="doctor-mini-header">
+                            <img src="assets/images/doctor-male.png" alt="Dr. Michael Chen" loading="lazy">
+                            <span class="badge badge-primary">Implants</span>
                         </div>
-                        <h3>Dr. Michael Chen</h3>
-                        <p>Full-arch implantologist leveraging guided surgery and same-day smile protocols.</p>
-                        <ul class="doctor-list-tags">
-                            <li>All-on-4</li>
-                            <li>Zygomatic</li>
-                            <li>IV Sedation</li>
-                        </ul>
-                        <div class="doctor-list-actions">
-                            <a href="doctor-michael-chen.html" class="btn btn-white btn-sm">Profile</a>
-                            <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                        <h4>Dr. Michael Chen</h4>
+                        <p>Full-arch implantologist delivering immediate-load solutions with guided surgery.</p>
+                        <div class="doctor-mini-meta">
+                            <span><i class="fas fa-tooth"></i>All-on-4</span>
+                            <span><i class="fas fa-clock"></i>18+ yrs</span>
                         </div>
-                    </div>
-                </article>
+                        <div class="doctor-mini-actions">
+                            <a href="doctor-michael-chen.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book</a>
+                        </div>
+                    </article>
+
+                    <article class="doctor-profile-mini">
+                        <div class="doctor-mini-header">
+                            <img src="assets/images/doctor-female.png" alt="Dr. Layla Al-Rashid" loading="lazy">
+                            <span class="badge badge-secondary">Aesthetics</span>
+                        </div>
+                        <h4>Dr. Layla Al-Rashid</h4>
+                        <p>HydraFacial and acne-transformation specialist for luminous, camera-ready skin.</p>
+                        <div class="doctor-mini-meta">
+                            <span><i class="fas fa-water"></i>HydraFacial</span>
+                            <span><i class="fas fa-clock"></i>8+ yrs</span>
+                        </div>
+                        <div class="doctor-mini-actions">
+                            <a href="doctor-layla-al-rashid.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
+                            <a href="contact.html" class="btn btn-secondary btn-sm">Book</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -607,8 +610,11 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/971555296155" class="whatsapp-float" target="_blank">
+    <!-- Floating Action Buttons -->
+    <a href="tel:+971555296155" class="call-float" aria-label="Call IB Clinic">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="https://wa.me/971555296155" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
