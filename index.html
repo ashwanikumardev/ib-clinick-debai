@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/hero-modern.css">
     <link rel="stylesheet" href="css/navbar-fix.css">
+    <!-- Preload Critical Assets for Instant Loading -->
+    <link rel="preload" as="video" href="assets/videos/99688-655952695_small.mp4" type="video/mp4">
+    <link rel="preload" as="image" href="assets/images/hero-background.png">
     <style>
         /* BRAND NEW MOBILE MENU STYLES - COMPLETELY REBUILT */
         @media (max-width: 768px) {
@@ -157,7 +160,7 @@
     <section class="hero-modern" id="home">
         <div class="hero-video-container">
             <!-- Video Background (download from https://pixabay.com/videos/dental-surgery-health-99688/) -->
-            <video class="hero-video" autoplay muted loop playsinline preload="auto"
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" fetchpriority="high"
                 poster="assets/images/hero-background.png">
                 <source src="assets/videos/99688-655952695_small.mp4" type="video/mp4">
             </video>
