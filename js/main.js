@@ -7,6 +7,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ============================================
+    // DOCTOR CAROUSEL AUTO SCROLL
+    // ============================================
+    const doctorCarousel = document.getElementById('doctorCarousel');
+    if (doctorCarousel) {
+        let direction = 1;
+        let isPaused = false;
+
+        doctorCarousel.addEventListener('mouseenter', () => isPaused = true);
+        doctorCarousel.addEventListener('mouseleave', () => isPaused = false);
+
+        const autoScroll = () => {
+            if (!isPaused && doctorCarousel.scrollWidth > doctorCarousel.clientWidth) {
+                doctorCarousel.scrollLeft += 0.6 * direction;
+                const maxScroll = doctorCarousel.scrollWidth - doctorCarousel.clientWidth;
+
+                if (doctorCarousel.scrollLeft >= maxScroll) {
+                    direction = -1;
+                } else if (doctorCarousel.scrollLeft <= 0) {
+                    direction = 1;
+                }
+            }
+            requestAnimationFrame(autoScroll);
+        };
+
+        requestAnimationFrame(autoScroll);
+    }
+
+    // ============================================
     // MOBILE NAVIGATION TOGGLE
     // ============================================
     const navbarToggle = document.getElementById('navbarToggle');
