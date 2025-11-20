@@ -1,0 +1,171 @@
+/* ============================================
+   INVISIBLE BRACES DENTAL & SKIN POLYCLINIC
+   Reusable Component Styles
+   ============================================ */
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-sticky);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.navbar.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.navbar.scrolled {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-4);
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    z-index: 1001;
+    position: relative;
+}
+
+.navbar-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    list-style: none;
+}
+
+.navbar-menu a {
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base);
+    transition: color var(--transition-base);
+    position: relative;
+}
+
+.navbar-menu a:hover {
+    color: var(--color-primary);
+}
+
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width var(--transition-base);
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+.navbar-menu a.active {
+    color: var(--color-primary);
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2);
+    position: relative;
+    z-index: 1001;
+}
+
+.navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-gray-700);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+.navbar-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--color-white);
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-6);
+        gap: var(--space-4);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+    }
+
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-menu a::after {
+        display: none;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+    }
+
+    /* Adjust button for mobile */
+    .navbar-menu .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

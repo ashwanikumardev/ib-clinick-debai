@@ -76,43 +76,6 @@
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-primary);
-    transition: width var(--transition-base);
-}
-
-.navbar-menu a:hover::after {
-    width: 100%;
-}
-
-.navbar-menu a.active {
-    color: var(--color-primary);
-}
-
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--space-2);
-}
-
-.navbar-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-gray-700);
-    border-radius: var(--radius-full);
-    transition: all var(--transition-base);
-}
-
-.navbar-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar-toggle.active span:nth-child(2) {
     opacity: 0;
 }
 
