@@ -40,32 +40,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbarToggle = document.getElementById('navbarToggle');
     const navbarMenu = document.getElementById('navbarMenu');
 
-    console.log('Navbar Toggle:', navbarToggle);
-    console.log('Navbar Menu:', navbarMenu);
-
     if (navbarToggle && navbarMenu) {
-        navbarToggle.addEventListener('click', function (e) {
-            console.log('Toggle button clicked!');
-            e.stopPropagation();
-            navbarToggle.classList.toggle('active');
-            navbarMenu.classList.toggle('active');
-            console.log('Toggle active:', navbarToggle.classList.contains('active'));
-            console.log('Menu active:', navbarMenu.classList.contains('active'));
-        });
+        console.log('✅ Mobile menu elements found');
 
-        // Also add touch event for mobile
-        navbarToggle.addEventListener('touchstart', function (e) {
-            console.log('Toggle button touched!');
+        // Toggle menu on button click
+        navbarToggle.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
+
+            const isActive = navbarMenu.classList.contains('active');
+            console.log('🔘 Button clicked! Menu is currently:', isActive ? 'OPEN' : 'CLOSED');
+
             navbarToggle.classList.toggle('active');
             navbarMenu.classList.toggle('active');
+
+            console.log('🔘 Menu is now:', navbarMenu.classList.contains('active') ? 'OPEN' : 'CLOSED');
         });
 
         // Close menu when clicking on a link
         const navLinks = navbarMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
+                console.log('📱 Link clicked, closing menu');
                 navbarToggle.classList.remove('active');
                 navbarMenu.classList.remove('active');
             });
@@ -73,14 +69,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Close menu when clicking outside
         document.addEventListener('click', function (event) {
-            const isClickInsideNav = navbarMenu.contains(event.target) || navbarToggle.contains(event.target);
-            if (!isClickInsideNav && navbarMenu.classList.contains('active')) {
-                navbarToggle.classList.remove('active');
-                navbarMenu.classList.remove('active');
+            if (!navbarToggle.contains(event.target) && !navbarMenu.contains(event.target)) {
+                if (navbarMenu.classList.contains('active')) {
+                    console.log('📱 Clicked outside, closing menu');
+                    navbarToggle.classList.remove('active');
+                    navbarMenu.classList.remove('active');
+                }
             }
         });
     } else {
-        console.error('Navbar toggle or menu not found!');
+        console.error('❌ Mobile menu elements NOT found!');
+        console.log('Toggle:', navbarToggle);
+        console.log('Menu:', navbarMenu);
     }
 
     // ============================================
