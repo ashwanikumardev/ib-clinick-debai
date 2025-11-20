@@ -7,7 +7,36 @@
     <title>Mobile Menu Test</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navbar-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 72px;
+        }
+
+        .test-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .test-content h1 {
+            color: #1E40AF;
+            margin-bottom: 20px;
+        }
+
+        .instructions {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,13 +49,10 @@
             </a>
 
             <ul class="navbar-menu" id="navbarMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="doctors.html">Our Doctors</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
 
             <button class="navbar-toggle" id="navbarToggle">
@@ -37,21 +63,28 @@
         </div>
     </nav>
 
-    <div style="height: 100vh; padding-top: 100px; text-align: center;">
-        <h1>Mobile Menu Test</h1>
-        <p>Resize your browser to mobile size (< 768px) and click the three-line button</p>
-                <p>Current window width: <span id="width"></span>px</p>
+    <div class="test-content">
+        <h1>Mobile Menu Test Page</h1>
+        <div class="instructions">
+            <h2>Testing Instructions:</h2>
+            <ol>
+                <li>Resize your browser window to mobile size (375px width or less)</li>
+                <li>You should see a hamburger menu button (three lines) in the top right</li>
+                <li>Click/tap the hamburger button</li>
+                <li>The menu should slide down from the top</li>
+                <li>Open browser console (F12) to see debug logs</li>
+            </ol>
+            <h3>What to check in console:</h3>
+            <ul>
+                <li>"Navbar Toggle: [object]" - confirms button found</li>
+                <li>"Navbar Menu: [object]" - confirms menu found</li>
+                <li>"Toggle button clicked!" - confirms click registered</li>
+                <li>"Toggle active: true" - confirms active class added</li>
+            </ul>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
-    <script>
-        // Display current width
-        function updateWidth() {
-            document.getElementById('width').textContent = window.innerWidth;
-        }
-        updateWidth();
-        window.addEventListener('resize', updateWidth);
-    </script>
 </body>
 
 </html>
