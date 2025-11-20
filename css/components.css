@@ -347,6 +347,29 @@
 .testimonial-card {
     padding: var(--space-8);
     position: relative;
+    background-color: var(--color-white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-md);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.testimonial-card.featured {
+    border: 1px solid transparent;
+    background-image: linear-gradient(var(--color-white), var(--color-white)),
+        var(--gradient-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: var(--shadow-xl);
 }
 
 .testimonial-quote {
@@ -354,7 +377,20 @@
     font-style: italic;
     color: var(--color-gray-700);
     line-height: var(--line-height-relaxed);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-1);
+}
+
+.testimonial-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+}
+
+.testimonial-date {
+    font-weight: var(--font-weight-medium);
 }
 
 .testimonial-author {
@@ -364,20 +400,123 @@
 }
 
 .testimonial-avatar {
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
     border-radius: var(--radius-full);
     object-fit: cover;
+    background-color: var(--color-gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray-500);
+    font-size: var(--font-size-lg);
+}
+
+.testimonial-avatar.placeholder i {
+    font-size: var(--font-size-lg);
 }
 
 .testimonial-name {
     font-weight: var(--font-weight-semibold);
     color: var(--color-gray-900);
+    margin-bottom: 2px;
+}
+
+.testimonial-role {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
 }
 
 .testimonial-rating {
     color: var(--color-accent);
+    font-size: var(--font-size-base);
+    display: flex;
+    gap: 4px;
+}
+
+.section-header-left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-10);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-12);
+}
+
+.testimonial-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-3);
+    padding: 0;
+    margin: var(--space-6) 0 0;
+    list-style: none;
+}
+
+.testimonial-highlights li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-700);
+}
+
+.testimonial-highlights i {
+    color: var(--color-primary);
+}
+
+.testimonial-rating-card {
+    background: var(--gradient-secondary);
+    color: var(--color-white);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    min-width: 280px;
+    text-align: center;
+}
+
+.testimonial-rating-card .testimonial-rating {
+    justify-content: center;
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+}
+
+.rating-score {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-bottom: var(--space-3);
+}
+
+.rating-score small {
     font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: var(--space-2);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-8);
+}
+
+@media (max-width: 768px) {
+    .testimonial-header {
+        flex-direction: column;
+    }
+
+    .testimonial-rating-card {
+        width: 100%;
+    }
 }
 
 /* ============================================
