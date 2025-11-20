@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Invisible Braces Dental and Skin Polyclinic - Book your appointment today. Located at World Trade Center, Dubai.">
+    <meta name="keywords"
+        content="contact IB clinic, book appointment Dubai, dental clinic World Trade Center, Dubai dentist contact">
+
+    <title>Contact Us | Invisible Braces Dental & Skin Polyclinic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-tooth"></i>
+                <span>IB Clinic</span>
+            </a>
+
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Our Doctors</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a></li>
+            </ul>
+
+            <button class="navbar-toggle" id="navbarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: 50vh; background: var(--gradient-hero);">
+        <div class="hero-content">
+            <h1 class="hero-title">Contact Us</h1>
+            <p class="hero-subtitle">Get in touch with our team - We're here to help</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="grid grid-cols-4">
+                <!-- Phone -->
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="card-icon" style="margin: 0 auto var(--space-4);">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="card-title">Call Us</h3>
+                        <p class="card-text mb-4">Speak with our team</p>
+                        <a href="tel:+971555296155" class="text-primary font-semibold">+971 55 529 6155</a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="card-icon"
+                            style="margin: 0 auto var(--space-4); background: var(--gradient-secondary);">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="card-title">Email Us</h3>
+                        <p class="card-text mb-4">Send us a message</p>
+                        <a href="mailto:Info@ibclinic.ae" class="text-primary font-semibold">Info@ibclinic.ae</a>
+                    </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="card-icon"
+                            style="margin: 0 auto var(--space-4); background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="card-title">WhatsApp</h3>
+                        <p class="card-text mb-4">Chat with us instantly</p>
+                        <a href="https://wa.me/971555296155" target="_blank" class="text-primary font-semibold">Message
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="card-icon"
+                            style="margin: 0 auto var(--space-4); background: var(--gradient-accent);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="card-title">Visit Us</h3>
+                        <p class="card-text mb-4">World Trade Center</p>
+                        <a href="#map" class="text-primary font-semibold">View Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Form & Map -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Booking Form -->
+                <div>
+                    <div class="section-header" style="text-align: left; margin-bottom: var(--space-8);">
+                        <p class="section-subtitle">Book Appointment</p>
+                        <h2 class="section-title text-left">Schedule Your Visit</h2>
+                        <p class="section-description">Fill out the form below and we'll get back to you within 24 hours
+                        </p>
+                    </div>
+
+                    <form id="appointmentForm" class="card" style="padding: var(--space-8);">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required
+                                placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required
+                                placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required
+                                placeholder="+971 XX XXX XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service Interested In *</label>
+                            <select id="service" name="service" class="form-select" required>
+                                <option value="">Select a service</option>
+                                <optgroup label="Dental Services">
+                                    <option value="clear-aligners">Clear Aligners</option>
+                                    <option value="smile-design">Smile Design</option>
+                                    <option value="dental-implants">Dental Implants</option>
+                                    <option value="veneers">Veneers</option>
+                                    <option value="teeth-whitening">Teeth Whitening</option>
+                                    <option value="lingual-braces">Lingual Braces</option>
+                                </optgroup>
+                                <optgroup label="Skin & Aesthetic Services">
+                                    <option value="laser-hair-removal">Laser Hair Removal</option>
+                                    <option value="skin-rejuvenation">Skin Rejuvenation</option>
+                                    <option value="hydrafacial">HydraFacial Treatment</option>
+                                    <option value="acne-treatment">Acne & Scar Treatment</option>
+                                    <option value="anti-aging">Anti-Aging Solutions</option>
+                                </optgroup>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" id="date" name="date" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time" class="form-label">Preferred Time</label>
+                            <select id="time" name="time" class="form-select">
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                                <option value="evening">Evening (3 PM - 6 PM)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Additional Notes</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Tell us about your concerns or any specific requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-full">
+                            <i class="fas fa-calendar-check"></i>
+                            Book Appointment
+                        </button>
+
+                        <p class="text-center mt-4"
+                            style="font-size: var(--font-size-sm); color: var(--color-gray-500);">
+                            By submitting this form, you agree to our privacy policy
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Info & Map -->
+                <div>
+                    <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-6);">
+                        <h3 class="card-title">Clinic Information</h3>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-3 flex items-center gap-2">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                                Address
+                            </h4>
+                            <p class="text-gray-600">
+                                Ground Floor, Shop No.4<br>
+                                White Swan Building<br>
+                                34 Sheikh Zayed Road<br>
+                                Trade Centre - Trade Centre 1<br>
+                                Dubai, UAE
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-3 flex items-center gap-2">
+                                <i class="fas fa-clock text-primary"></i>
+                                Opening Hours
+                            </h4>
+                            <div class="text-gray-600">
+                                <div class="flex justify-between mb-2">
+                                    <span>Monday - Friday:</span>
+                                    <span class="font-semibold">9:00 AM - 8:00 PM</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Saturday:</span>
+                                    <span class="font-semibold">9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Sunday:</span>
+                                    <span class="font-semibold">10:00 AM - 4:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-3 flex items-center gap-2">
+                                <i class="fas fa-phone text-primary"></i>
+                                Contact Numbers
+                            </h4>
+                            <p class="text-gray-600">
+                                <a href="tel:+971555296155" class="text-primary hover:underline">+971 55 529 6155</a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-3 flex items-center gap-2">
+                                <i class="fas fa-envelope text-primary"></i>
+                                Email
+                            </h4>
+                            <p class="text-gray-600">
+                                <a href="mailto:Info@ibclinic.ae"
+                                    class="text-primary hover:underline">Info@ibclinic.ae</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Google Map -->
+                    <div class="card" style="padding: 0; overflow: hidden;" id="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.2059469847!2d55.28194931501205!3d25.196773183887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682829c85bf7%3A0x4a9a8c5c5c5c5c5c!2sWorld%20Trade%20Centre%2C%20Dubai!5e0!3m2!1sen!2sae!4v1234567890123!5m2!1sen!2sae"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Common Questions</p>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-bold mb-3">Do you accept insurance?</h4>
+                        <p class="text-gray-600">Yes, we accept most major insurance plans. Please contact us with your
+                            insurance details for verification.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-bold mb-3">Do I need an appointment?</h4>
+                        <p class="text-gray-600">While walk-ins are welcome, we recommend booking an appointment to
+                            minimize wait times and ensure availability.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-bold mb-3">Is parking available?</h4>
+                        <p class="text-gray-600">Yes, ample parking is available at the World Trade Center complex.
+                            Parking validation is provided for patients.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-bold mb-3">What languages do you speak?</h4>
+                        <p class="text-gray-600">Our multilingual staff speaks English, Arabic, Hindi, Urdu, and other
+                            languages to serve our diverse clientele.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-bold mb-3">Do you offer payment plans?</h4>
+                        <p class="text-gray-600">Yes, we offer flexible payment plans for most treatments. Discuss
+                            options with our team during your consultation.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-bold mb-3">How do I prepare for my first visit?</h4>
+                        <p class="text-gray-600">Bring your ID, insurance card (if applicable), and any relevant medical
+                            records. Arrive 10 minutes early to complete paperwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Invisible Braces Clinic</h3>
+                    <p>Dubai's premier dental and skin polyclinic, offering world-class treatments in the heart of the
+                        World Trade Center.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#clear-aligners">Clear Aligners</a></li>
+                        <li><a href="services.html#dental-implants">Dental Implants</a></li>
+                        <li><a href="services.html#veneers">Veneers</a></li>
+                        <li><a href="services.html#teeth-whitening">Teeth Whitening</a></li>
+                        <li><a href="services.html#laser-hair-removal">Laser Hair Removal</a></li>
+                        <li><a href="services.html#skin-rejuvenation">Skin Rejuvenation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <i class="footer-contact-icon fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Ground Floor, Shop No.4<br>
+                                White Swan Building<br>
+                                34 Sheikh Zayed Rd<br>
+                                World Trade Center, Dubai, UAE</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="footer-contact-icon fas fa-phone"></i>
+                        <div>
+                            <a href="tel:+971555296155">+971 55 529 6155</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="footer-contact-icon fas fa-envelope"></i>
+                        <div>
+                            <a href="mailto:Info@ibclinic.ae">Info@ibclinic.ae</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Invisible Braces Dental and Skin Polyclinic LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/971555296155" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.408 1.408-5.234-0.321-0.519c-1.342-2.174-2.051-4.684-2.051-7.26 0-7.585 6.172-13.76 13.76-13.76s13.76 6.175 13.76 13.76c0 7.585-6.172 13.76-13.76 13.76zM21.107 19.134c-0.368-0.184-2.173-1.073-2.513-1.196-0.339-0.122-0.585-0.184-0.832 0.184-0.245 0.368-0.954 1.196-1.172 1.441s-0.43 0.276-0.798 0.092c-0.368-0.184-1.555-0.573-2.961-1.825-1.094-0.975-1.833-2.179-2.048-2.547s-0.022-0.566 0.161-0.749c0.166-0.165 0.368-0.43 0.552-0.645s0.245-0.368 0.368-0.614 0.061-0.461-0.031-0.645c-0.092-0.184-0.832-2.001-1.141-2.741-0.301-0.721-0.607-0.622-0.832-0.634-0.215-0.011-0.461-0.013-0.707-0.013s-0.645 0.092-0.984 0.461c-0.339 0.368-1.293 1.264-1.293 3.081s1.324 3.574 1.508 3.82c0.184 0.245 2.599 3.967 6.297 5.565 0.88 0.381 1.567 0.608 2.101 0.778 0.885 0.282 1.689 0.242 2.326 0.147 0.709-0.106 2.173-0.888 2.48-1.748s0.307-1.595 0.215-1.748c-0.092-0.153-0.339-0.245-0.707-0.43z" />
+        </svg>
+    </a>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+
+</html>
