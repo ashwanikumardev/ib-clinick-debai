@@ -286,6 +286,46 @@ document.addEventListener('DOMContentLoaded', function() {
     lazyImages.forEach(img => imageObserver.observe(img));
     
     // ============================================
+    // DOCTOR CAROUSEL NAVIGATION
+    // ============================================
+    const doctorCarousel = document.getElementById('doctorCarousel');
+    const prevBtn = document.getElementById('doctorPrevBtn');
+    const nextBtn = document.getElementById('doctorNextBtn');
+    
+    if (doctorCarousel && prevBtn && nextBtn) {
+        const scrollAmount = 350; // Amount to scroll per click
+        
+        prevBtn.addEventListener('click', function() {
+            doctorCarousel.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+        
+        nextBtn.addEventListener('click', function() {
+            doctorCarousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Hide/show buttons based on scroll position
+        function updateButtonVisibility() {
+            const scrollLeft = doctorCarousel.scrollLeft;
+            const maxScroll = doctorCarousel.scrollWidth - doctorCarousel.clientWidth;
+            
+            prevBtn.style.opacity = scrollLeft > 0 ? '1' : '0.5';
+            prevBtn.style.cursor = scrollLeft > 0 ? 'pointer' : 'not-allowed';
+            
+            nextBtn.style.opacity = scrollLeft < maxScroll - 10 ? '1' : '0.5';
+            nextBtn.style.cursor = scrollLeft < maxScroll - 10 ? 'pointer' : 'not-allowed';
+        }
+        
+        doctorCarousel.addEventListener('scroll', updateButtonVisibility);
+        updateButtonVisibility(); // Initial check
+    }
+    
+    // ============================================
     // CONSOLE MESSAGE
     // ============================================
     console.log('%c🦷 Invisible Braces Dental & Skin Polyclinic', 'color: #1E40AF; font-size: 20px; font-weight: bold;');

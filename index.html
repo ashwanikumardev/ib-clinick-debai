@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -56,7 +56,8 @@
     <section class="hero-modern" id="home">
         <div class="hero-video-container">
             <!-- Video Background (download from https://pixabay.com/videos/dental-surgery-health-99688/) -->
-            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-background.png">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto"
+                poster="assets/images/hero-background.png">
                 <source src="assets/videos/99688-655952695_small.mp4" type="video/mp4">
             </video>
             <div class="hero-video-overlay"></div>
@@ -308,7 +309,8 @@
             <div class="section-header">
                 <p class="section-subtitle">Meet Our Specialists</p>
                 <h2 class="section-title">World-Class Doctors You Can Trust</h2>
-                <p class="section-description">Internationally trained experts in orthodontics, implantology, dermatology,
+                <p class="section-description">Internationally trained experts in orthodontics, implantology,
+                    dermatology,
                     and aesthetic medicine under one roof.</p>
             </div>
 
@@ -324,7 +326,8 @@
                             <span><i class="fas fa-clock"></i>15+ yrs exp</span>
                         </div>
                         <h3>Dr. Ahmed Al-Mansouri</h3>
-                        <p>Invisible aligner pioneer blending digital smile design with minimally invasive orthodontics.</p>
+                        <p>Invisible aligner pioneer blending digital smile design with minimally invasive orthodontics.
+                        </p>
                         <ul class="doctor-metrics">
                             <li><strong>2500+</strong><span>Smile Cases</span></li>
                             <li><strong>3D</strong><span>Mock-up Planning</span></li>
@@ -338,74 +341,84 @@
                 </article>
 
                 <div class="doctor-carousel">
+                    <button class="carousel-btn carousel-btn-prev" id="doctorPrevBtn" aria-label="Previous doctor">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" id="doctorNextBtn" aria-label="Next doctor">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                     <div class="doctor-carousel-track" id="doctorCarousel">
-                    <article class="doctor-profile-mini">
-                        <div class="doctor-mini-header">
-                            <img src="assets/images/doctor-female.png" alt="Dr. Sarah Johnson" loading="lazy">
-                            <span class="badge badge-secondary">Cosmetic</span>
-                        </div>
-                        <h4>Dr. Sarah Johnson</h4>
-                        <p>Smile design artist delivering bespoke veneer journeys and guided whitening.</p>
-                        <div class="doctor-mini-meta">
-                            <span><i class="fas fa-star"></i>4.9/5 rating</span>
-                            <span><i class="fas fa-clock"></i>12+ yrs</span>
-                        </div>
-                        <div class="doctor-mini-actions">
-                            <a href="doctor-sarah-johnson.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
-                            <a href="contact.html" class="btn btn-secondary btn-sm">Book</a>
-                        </div>
-                    </article>
+                        <article class="doctor-profile-mini">
+                            <div class="doctor-mini-header">
+                                <img src="assets/images/doctor-female.png" alt="Dr. Sarah Johnson" loading="lazy">
+                                <span class="badge badge-secondary">Cosmetic</span>
+                            </div>
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Smile design artist delivering bespoke veneer journeys and guided whitening.</p>
+                            <div class="doctor-mini-meta">
+                                <span><i class="fas fa-star"></i>4.9/5 rating</span>
+                                <span><i class="fas fa-clock"></i>12+ yrs</span>
+                            </div>
+                            <div class="doctor-mini-actions">
+                                <a href="doctor-sarah-johnson.html" class="btn-link">Full bio <i
+                                        class="fas fa-arrow-right"></i></a>
+                                <a href="contact.html" class="btn btn-secondary btn-sm">Book</a>
+                            </div>
+                        </article>
 
-                    <article class="doctor-profile-mini">
-                        <div class="doctor-mini-header">
-                            <img src="assets/images/doctor-female.png" alt="Dr. Fatima Hassan" loading="lazy">
-                            <span class="badge badge-accent">Dermatology</span>
-                        </div>
-                        <h4>Dr. Fatima Hassan</h4>
-                        <p>Laser medicine lead focusing on pigment balance, collagen, and skin resilience.</p>
-                        <div class="doctor-mini-meta">
-                            <span><i class="fas fa-laser"></i>Laser Suite</span>
-                            <span><i class="fas fa-clock"></i>10+ yrs</span>
-                        </div>
-                        <div class="doctor-mini-actions">
-                            <a href="doctor-fatima-hassan.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
-                            <a href="contact.html" class="btn btn-accent btn-sm">Book</a>
-                        </div>
-                    </article>
+                        <article class="doctor-profile-mini">
+                            <div class="doctor-mini-header">
+                                <img src="assets/images/doctor-female.png" alt="Dr. Fatima Hassan" loading="lazy">
+                                <span class="badge badge-accent">Dermatology</span>
+                            </div>
+                            <h4>Dr. Fatima Hassan</h4>
+                            <p>Laser medicine lead focusing on pigment balance, collagen, and skin resilience.</p>
+                            <div class="doctor-mini-meta">
+                                <span><i class="fas fa-laser"></i>Laser Suite</span>
+                                <span><i class="fas fa-clock"></i>10+ yrs</span>
+                            </div>
+                            <div class="doctor-mini-actions">
+                                <a href="doctor-fatima-hassan.html" class="btn-link">Full bio <i
+                                        class="fas fa-arrow-right"></i></a>
+                                <a href="contact.html" class="btn btn-accent btn-sm">Book</a>
+                            </div>
+                        </article>
 
-                    <article class="doctor-profile-mini">
-                        <div class="doctor-mini-header">
-                            <img src="assets/images/doctor-male.png" alt="Dr. Michael Chen" loading="lazy">
-                            <span class="badge badge-primary">Implants</span>
-                        </div>
-                        <h4>Dr. Michael Chen</h4>
-                        <p>Full-arch implantologist delivering immediate-load solutions with guided surgery.</p>
-                        <div class="doctor-mini-meta">
-                            <span><i class="fas fa-tooth"></i>All-on-4</span>
-                            <span><i class="fas fa-clock"></i>18+ yrs</span>
-                        </div>
-                        <div class="doctor-mini-actions">
-                            <a href="doctor-michael-chen.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Book</a>
-                        </div>
-                    </article>
+                        <article class="doctor-profile-mini">
+                            <div class="doctor-mini-header">
+                                <img src="assets/images/doctor-male.png" alt="Dr. Michael Chen" loading="lazy">
+                                <span class="badge badge-primary">Implants</span>
+                            </div>
+                            <h4>Dr. Michael Chen</h4>
+                            <p>Full-arch implantologist delivering immediate-load solutions with guided surgery.</p>
+                            <div class="doctor-mini-meta">
+                                <span><i class="fas fa-tooth"></i>All-on-4</span>
+                                <span><i class="fas fa-clock"></i>18+ yrs</span>
+                            </div>
+                            <div class="doctor-mini-actions">
+                                <a href="doctor-michael-chen.html" class="btn-link">Full bio <i
+                                        class="fas fa-arrow-right"></i></a>
+                                <a href="contact.html" class="btn btn-primary btn-sm">Book</a>
+                            </div>
+                        </article>
 
-                    <article class="doctor-profile-mini">
-                        <div class="doctor-mini-header">
-                            <img src="assets/images/doctor-female.png" alt="Dr. Layla Al-Rashid" loading="lazy">
-                            <span class="badge badge-secondary">Aesthetics</span>
-                        </div>
-                        <h4>Dr. Layla Al-Rashid</h4>
-                        <p>HydraFacial and acne-transformation specialist for luminous, camera-ready skin.</p>
-                        <div class="doctor-mini-meta">
-                            <span><i class="fas fa-water"></i>HydraFacial</span>
-                            <span><i class="fas fa-clock"></i>8+ yrs</span>
-                        </div>
-                        <div class="doctor-mini-actions">
-                            <a href="doctor-layla-al-rashid.html" class="btn-link">Full bio <i class="fas fa-arrow-right"></i></a>
-                            <a href="contact.html" class="btn btn-secondary btn-sm">Book</a>
-                        </div>
-                    </article>
+                        <article class="doctor-profile-mini">
+                            <div class="doctor-mini-header">
+                                <img src="assets/images/doctor-female.png" alt="Dr. Layla Al-Rashid" loading="lazy">
+                                <span class="badge badge-secondary">Aesthetics</span>
+                            </div>
+                            <h4>Dr. Layla Al-Rashid</h4>
+                            <p>HydraFacial and acne-transformation specialist for luminous, camera-ready skin.</p>
+                            <div class="doctor-mini-meta">
+                                <span><i class="fas fa-water"></i>HydraFacial</span>
+                                <span><i class="fas fa-clock"></i>8+ yrs</span>
+                            </div>
+                            <div class="doctor-mini-actions">
+                                <a href="doctor-layla-al-rashid.html" class="btn-link">Full bio <i
+                                        class="fas fa-arrow-right"></i></a>
+                                <a href="contact.html" class="btn btn-secondary btn-sm">Book</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -587,7 +600,8 @@
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Ground Floor, Shop No.4, White Swan Building, 32 Sheikh Zayed Rd, Trade Center First, Dubai - United Arab Emirates</span>
+                            <span>Ground Floor, Shop No.4, White Swan Building, 32 Sheikh Zayed Rd, Trade Center First,
+                                Dubai - United Arab Emirates</span>
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
