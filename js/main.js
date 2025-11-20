@@ -35,52 +35,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ============================================
-    // MOBILE NAVIGATION TOGGLE
+    // MOBILE NAVIGATION TOGGLE - NEW BUTTON
     // ============================================
-    const navbarToggle = document.getElementById('navbarToggle');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navbarMenu = document.getElementById('navbarMenu');
 
-    if (navbarToggle && navbarMenu) {
-        console.log('✅ Mobile menu elements found');
+    if (mobileMenuBtn && navbarMenu) {
+        console.log('✅ NEW Mobile menu button found!');
 
-        // Toggle menu on button click
-        navbarToggle.addEventListener('click', function (e) {
+        mobileMenuBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            e.stopPropagation();
-
-            const isActive = navbarMenu.classList.contains('active');
-            console.log('🔘 Button clicked! Menu is currently:', isActive ? 'OPEN' : 'CLOSED');
-
-            navbarToggle.classList.toggle('active');
+            console.log('🔘 Mobile menu button clicked!');
+            mobileMenuBtn.classList.toggle('active');
             navbarMenu.classList.toggle('active');
-
-            console.log('🔘 Menu is now:', navbarMenu.classList.contains('active') ? 'OPEN' : 'CLOSED');
         });
 
         // Close menu when clicking on a link
         const navLinks = navbarMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
-                console.log('📱 Link clicked, closing menu');
-                navbarToggle.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
                 navbarMenu.classList.remove('active');
             });
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', function (event) {
-            if (!navbarToggle.contains(event.target) && !navbarMenu.contains(event.target)) {
-                if (navbarMenu.classList.contains('active')) {
-                    console.log('📱 Clicked outside, closing menu');
-                    navbarToggle.classList.remove('active');
-                    navbarMenu.classList.remove('active');
-                }
+            const isClickInsideNav = navbarMenu.contains(event.target) || mobileMenuBtn.contains(event.target);
+            if (!isClickInsideNav && navbarMenu.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navbarMenu.classList.remove('active');
             }
         });
     } else {
-        console.error('❌ Mobile menu elements NOT found!');
-        console.log('Toggle:', navbarToggle);
-        console.log('Menu:', navbarMenu);
+        console.error('❌ Mobile menu button not found!');
     }
 
     // ============================================
@@ -302,46 +290,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     lazyImages.forEach(img => imageObserver.observe(img));
-
-    // ============================================
-    // DOCTOR CAROUSEL NAVIGATION
-    // ============================================
-    const doctorCarousel = document.getElementById('doctorCarousel');
-    const prevBtn = document.getElementById('doctorPrevBtn');
-    const nextBtn = document.getElementById('doctorNextBtn');
-
-    if (doctorCarousel && prevBtn && nextBtn) {
-        const scrollAmount = 350; // Amount to scroll per click
-
-        prevBtn.addEventListener('click', function () {
-            doctorCarousel.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        nextBtn.addEventListener('click', function () {
-            doctorCarousel.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Hide/show buttons based on scroll position
-        function updateButtonVisibility() {
-            const scrollLeft = doctorCarousel.scrollLeft;
-            const maxScroll = doctorCarousel.scrollWidth - doctorCarousel.clientWidth;
-
-            prevBtn.style.opacity = scrollLeft > 0 ? '1' : '0.5';
-            prevBtn.style.cursor = scrollLeft > 0 ? 'pointer' : 'not-allowed';
-
-            nextBtn.style.opacity = scrollLeft < maxScroll - 10 ? '1' : '0.5';
-            nextBtn.style.cursor = scrollLeft < maxScroll - 10 ? 'pointer' : 'not-allowed';
-        }
-
-        doctorCarousel.addEventListener('scroll', updateButtonVisibility);
-        updateButtonVisibility(); // Initial check
-    }
 
     // ============================================
     // CONSOLE MESSAGE
