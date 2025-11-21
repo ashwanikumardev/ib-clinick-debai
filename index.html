@@ -160,9 +160,10 @@
     <section class="hero-modern" id="home">
         <div class="hero-video-container">
             <!-- Video Background (download from https://pixabay.com/videos/dental-surgery-health-99688/) -->
-            <video class="hero-video" autoplay muted loop playsinline preload="auto" fetchpriority="high"
-                poster="assets/images/hero-background.png">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+                poster="assets/images/hero-background.png" id="heroBackgroundVideo">
                 <source src="assets/videos/99688-655952695_small.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
             <div class="hero-video-overlay"></div>
         </div>
@@ -193,9 +194,11 @@
 
                 <div class="hero-image-section animate-slide-in-right">
                     <div class="hero-image-wrapper">
-                        <video autoplay muted loop playsinline class="hero-feature-image"
+                        <video autoplay muted loop playsinline preload="metadata" class="hero-feature-image"
+                            id="heroFeatureVideo"
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);">
                             <source src="assets/videos/99688-655952695_small.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>

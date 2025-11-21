@@ -34,12 +34,20 @@
     object-fit: cover;
     opacity: 0.3;
     display: block;
+    z-index: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Hide video if it fails to load */
 .hero-video:not([src]),
 .hero-video[src=""] {
     display: none;
+}
+
+/* Show poster while video loads */
+.hero-video[poster] {
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-video-overlay {

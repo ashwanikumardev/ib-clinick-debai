@@ -7,6 +7,97 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // ============================================
+    // VIDEO LOADING AND ERROR HANDLING
+    // ============================================
+    const heroBackgroundVideo = document.getElementById('heroBackgroundVideo');
+    const heroFeatureVideo = document.getElementById('heroFeatureVideo');
+
+    // Function to ensure video plays
+    function ensureVideoPlays(video) {
+        if (!video) return;
+
+        console.log(`🎥 Initializing video: ${video.id}`);
+
+        // Set video attributes programmatically for better browser support
+        video.muted = true;
+        video.playsInline = true;
+        video.loop = true;
+        video.autoplay = true;
+
+        // Handle video loading
+        video.addEventListener('loadeddata', function () {
+            console.log(`✅ Video loaded successfully: ${video.id}`);
+            // Attempt to play
+            const playPromise = video.play();
+
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        console.log(`▶️ Video playing: ${video.id}`);
+                    })
+                    .catch(error => {
+                        console.warn(`⚠️ Autoplay prevented for ${video.id}:`, error);
+                        // Try to play on user interaction
+                        document.addEventListener('click', function playOnClick() {
+                            video.play();
+                            document.removeEventListener('click', playOnClick);
+                        }, { once: true });
+                    });
+            }
+        });
+
+        // Handle video errors
+        video.addEventListener('error', function (e) {
+            console.error(`❌ Video error for ${video.id}:`, e);
+            // Show poster image as fallback
+            if (video.poster) {
+                video.style.backgroundImage = `url(${video.poster})`;
+                video.style.backgroundSize = 'cover';
+                video.style.backgroundPosition = 'center';
+            }
+        });
+
+        // Handle stalled video
+        video.addEventListener('stalled', function () {
+            console.warn(`⏸️ Video stalled: ${video.id}, attempting to reload...`);
+            video.load();
+        });
+
+        // Attempt to load and play
+        video.load();
+
+        // Fallback: Try to play after a short delay
+        setTimeout(() => {
+            if (video.paused) {
+                video.play().catch(err => {
+                    console.warn(`⚠️ Delayed play failed for ${video.id}:`, err);
+                });
+            }
+        }, 500);
+    }
+
+    // Initialize both videos
+    if (heroBackgroundVideo) {
+        ensureVideoPlays(heroBackgroundVideo);
+    }
+
+    if (heroFeatureVideo) {
+        ensureVideoPlays(heroFeatureVideo);
+    }
+
+    // Ensure videos continue playing after page visibility changes
+    document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) {
+            if (heroBackgroundVideo && heroBackgroundVideo.paused) {
+                heroBackgroundVideo.play().catch(err => console.warn('Background video resume failed:', err));
+            }
+            if (heroFeatureVideo && heroFeatureVideo.paused) {
+                heroFeatureVideo.play().catch(err => console.warn('Feature video resume failed:', err));
+            }
+        }
+    });
+
+    // ============================================
     // DOCTOR CAROUSEL AUTO SCROLL
     // ============================================
     const doctorCarousel = document.getElementById('doctorCarousel');
